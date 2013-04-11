@@ -11,7 +11,7 @@ r = praw.Reddit(user_agent='saved links downloader v0.1')
 r.login()
 print
 
-for counter,link in enumerate(r.user.get_saved(limit=10), 1):
+for counter,link in enumerate(r.user.get_saved(limit=None), 1):
     print 'Saved link #' + str(counter)
     print 'Title: '+ link.title.strip()
     print 'URL: ' + link.url
