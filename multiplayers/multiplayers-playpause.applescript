@@ -6,7 +6,7 @@ tell application "System Events"
 	set MyList to (name of every process)
 end tell
 if (MyList contains "Spotify") is true then
-	tell application "AppleScript Editor" to «event spfyPlPs»
+	tell application "Spotify" to «event spfyPlPs»
 	return true
 end if
 if (MyList contains "iTunes") is true then
