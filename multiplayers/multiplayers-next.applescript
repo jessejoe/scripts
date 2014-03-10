@@ -1,5 +1,5 @@
 try
-	do shell script "cmus-remote -n"
+	do shell script "/usr/local/bin/cmus-remote -n"
 	return true
 end try
 tell application "System Events"
