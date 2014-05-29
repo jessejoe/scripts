@@ -33,6 +33,10 @@ if (MyList contains "Google Chrome") is true then
 					tell t to execute javascript "if (window.document.getElementsByClassName('paused').length){ window.amznMusic.widgets.player.resume(); }else{ window.amznMusic.widgets.player.pause(); }"
 					return true
 				end if
+				if URL of t contains "listen.beatsmusic.com" then
+					tell t to execute javascript "(document.getElementById('play_pause_icon')).click();"
+					return true
+				end if
 			end repeat
 		end repeat
 	end tell
