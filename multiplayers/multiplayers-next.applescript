@@ -5,6 +5,10 @@ end try
 tell application "System Events"
 	set MyList to (name of every process)
 end tell
+if (MyList contains "VOX") is true then
+	tell application "VOX" to next track
+	return true
+end if
 if (MyList contains "Spotify") is true then
 	tell application "Spotify" to next track
 	return true
