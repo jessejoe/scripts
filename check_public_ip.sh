@@ -1,5 +1,5 @@
 #!/bin/bash
-EXPECTED_IP="X.X.X.X"
+EXPECTED_IP="x.x.x.x"
 CURRENT_IP=$(curl -s http://api.ipify.org)
 if [ "$EXPECTED_IP" != "$CURRENT_IP" ]
 then
