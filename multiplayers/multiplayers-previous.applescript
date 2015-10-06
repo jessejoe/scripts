@@ -10,7 +10,7 @@ if (MyList contains "VOX") is true then
 	return true
 end if
 if (MyList contains "Spotify") is true then
-	tell application "Spotify" to previous track
+	tell application "Spotify.app" to «event spfyPrev»
 	return true
 end if
 if (MyList contains "iTunes") is true then
@@ -25,8 +25,8 @@ if (MyList contains "Google Chrome") is true then
 	tell application "Google Chrome"
 		repeat with w in (every window)
 			repeat with t in every tab of w
-				if URL of t contains "play.spotify.com" then
-					tell t to execute javascript "(document.getElementById('app-player').contentWindow.document.getElementById('previous')).click();"
+				if URL of t contains "player.spotify.com" then
+					tell t to execute javascript "(document.getElementById('main').contentWindow.document.getElementById('previous')).click();"
 					return true
 				end if
 				if URL of t contains "play.google.com/music" then
