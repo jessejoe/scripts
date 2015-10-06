@@ -25,11 +25,11 @@ if (MyList contains "Google Chrome") is true then
 	tell application "Google Chrome"
 		repeat with w in (every window)
 			repeat with t in every tab of w
-				if URL of t contains "play.spotify.com" then
-					tell t to execute javascript "(document.getElementById('app-player').contentWindow.document.getElementById('play-pause')).click();"
+				if URL of t contains "player.spotify.com" then
+					tell t to execute javascript "(document.getElementById('main').contentWindow.document.getElementById('play')).click();"
 					return true
 				end if
-				if URL of t contains "play.google.com/music" then
+				if title of t contains "gMusic" then
 					tell t to execute javascript "(document.querySelector('[data-id=\"play-pause\"]')).click();"
 					return true
 				end if
