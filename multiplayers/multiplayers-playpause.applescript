@@ -29,7 +29,7 @@ if (MyList contains "Google Chrome") is true then
 					tell t to execute javascript "(document.getElementById('main').contentWindow.document.getElementById('play')).click();"
 					return true
 				end if
-				if title of t contains "gMusic" then
+				if URL of t contains "play.google.com/music" then
 					tell t to execute javascript "(document.querySelector('[data-id=\"play-pause\"]')).click();"
 					return true
 				end if
