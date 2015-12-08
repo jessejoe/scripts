@@ -25,6 +25,8 @@ else:
     # If no message provided, (re)set last name
     status = last_name
 
+# Double brackets required for python strings to be literal brackets
+# 'profile' must be a string, not a dict/object
 payload = {'profile': '{{"last_name":"{}"}}'.format(status),
            'token': api_token,
            'set_active': 'true'}
