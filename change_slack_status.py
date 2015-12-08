@@ -28,8 +28,7 @@ else:
 # Double brackets required for python strings to be literal brackets
 # 'profile' must be a string, not a dict/object
 payload = {'profile': '{{"last_name":"{}"}}'.format(status),
-           'token': api_token,
-           'set_active': 'true'}
+           'token': api_token}
 
 r = requests.post('https://slack.com/api/users.profile.set', data=payload)
 # Check for HTTP response errors
